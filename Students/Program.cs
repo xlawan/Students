@@ -40,7 +40,8 @@ class Program
             s.over = double.Parse(Console.ReadLine());
 
 
-            Console.WriteLine("Name: {0}  {1} {2}", s.firstName, s.lastName, s.idnum);
+            Console.WriteLine("Name: {0} {1}", s.firstName, s.lastName);
+            Console.WriteLine("ID: {0}", s.idnum);
             Console.WriteLine("Grade: {0} ", s.score);
             double grade = (s.score / s.over) * 100;
 
@@ -48,22 +49,22 @@ class Program
             if (grade >= 95)
             {
                 int exce = (int)Remark.Excellent;
-                Console.WriteLine("Remarks: {0}", exce);
+                Console.WriteLine("Remarks: {0} - Excellent", exce);
             }
             else if (grade >= 85 && grade < 95)
             {
-                int good = (int)Remark.Fair;
-                Console.WriteLine("Remarks: {0}", good);
+                int good = (int)Remark.Good;
+                Console.WriteLine("Remarks: {0} - Good", good);
             }
             else if (grade >= 75 && grade < 85)
             {
                 int fair = (int)Remark.Fair;
-                Console.WriteLine("Remarks: {0}", fair);
+                Console.WriteLine("Remarks: {0} - Fair", fair);
             }
             else if (grade < 75)
             {
-                int poor = (int)Remark.Fair;
-                Console.WriteLine("Remarks: {0}", poor);
+                int poor = (int)Remark.Poor;
+                Console.WriteLine("Remarks: {0} - Poor", poor);
             }
         }
         catch (Exception e)
