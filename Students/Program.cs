@@ -63,7 +63,7 @@ class Program
             }
             else if (grade < 75)
             {
-                int poor = (int)Remark.Fair;
+                int poor = (int)Remark.Poor;
                 Console.WriteLine("Remarks: {0} - Poor", poor);
             }
         }
