@@ -4,10 +4,10 @@ class Program
 {
     public struct Student
     {
-        public int idnum;
+        public int id;
         public string firstName;
         public string lastName;
-        public double score;
+        public double quizscore;
         public double over;
 
     }
@@ -24,44 +24,44 @@ class Program
         try
         {
             Student s;
-            Console.WriteLine("Enter your ID Number");
-            s.idnum = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your ID Number:");
+            s.id = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter your First Name");
+            Console.WriteLine("Enter your First Name:");
             s.firstName = Console.ReadLine();
 
-            Console.WriteLine("Enter your Last Name");
+            Console.WriteLine("Enter your Last Name:");
             s.lastName = Console.ReadLine();
 
-            Console.WriteLine("Enter your Score");
-            s.score = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter your Score:");
+            s.quizscore = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the  Overall Score");
+            Console.WriteLine("Enter the  Overall Score:");
             s.over = double.Parse(Console.ReadLine());
 
 
-            Console.WriteLine("Name: {0} {1}", s.firstName, s.lastName);
-            Console.WriteLine("ID: {0}", s.idnum);
-            Console.WriteLine("Grade: {0} ", s.score);
-            double grade = (s.score / s.over) * 100;
+            Console.WriteLine("\nName: {0} {1}", s.firstName, s.lastName);
+            Console.WriteLine("ID: {0}", s.id);
+            Console.WriteLine("Grade: {0}/{1} ", s.quizscore, s.over);
+            double grade = (s.quizscore / s.over) * 100;
 
 
-            if (grade >= 95)
+            if (grade >= 90)
             {
                 int exce = (int)Remark.Excellent;
                 Console.WriteLine("Remarks: {0} - Excellent", exce);
             }
-            else if (grade >= 85 && grade < 95)
+            else if (grade >= 80 && grade < 90)
             {
                 int good = (int)Remark.Good;
                 Console.WriteLine("Remarks: {0} - Good", good);
             }
-            else if (grade >= 75 && grade < 85)
+            else if (grade >= 70 && grade < 80)
             {
                 int fair = (int)Remark.Fair;
                 Console.WriteLine("Remarks: {0} - Fair", fair);
             }
-            else if (grade < 75)
+            else if (grade < 70)
             {
                 int poor = (int)Remark.Poor;
                 Console.WriteLine("Remarks: {0} - Poor", poor);
